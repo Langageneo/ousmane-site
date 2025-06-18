@@ -5,281 +5,182 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ousmane CISSÉ — Services Informatiques & Espace Café</title>
   <style>
-    /* Reset */
-    * {
-      box-sizing: border-box;
-    }
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #f0f0f0;
-      line-height: 1.5;
+      color: white;
+      min-height: 100vh;
     }
+
     header {
       background-color: #1abc9c;
-      padding: 1.5em;
+      padding: 1.2em;
       text-align: center;
       font-size: 2em;
       font-weight: bold;
       box-shadow: 0 0 15px #000;
-      color: #002e26;
     }
+
     main {
-      max-width: 960px;
+      max-width: 900px;
       margin: 2em auto;
       padding: 0 1em;
     }
 
-    /* Photo + titre */
-    #photo-container {
+    /* Photo d'Ousmane en haut, bien encadrée */
+    #photo-ousmane {
       display: flex;
-      align-items: center;
-      gap: 1.5em;
+      justify-content: center;
       margin-bottom: 2em;
-      background: #1abc9c22;
-      border-radius: 12px;
-      padding: 1em 1.5em;
-      box-shadow: 0 0 10px #00000055;
     }
-    #photo-container img {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
+
+    #photo-ousmane img {
+      max-width: 250px;
       border-radius: 12px;
       border: 4px solid #1abc9c;
-      box-shadow: 0 0 15px #000000aa;
-    }
-    #photo-container h1 {
-      font-size: 2.2em;
-      color: #1abc9c;
-      margin: 0;
-      text-shadow: 0 0 6px #000;
+      box-shadow: 0 0 15px #00000090;
+      object-fit: cover;
+      height: auto;
     }
 
-    /* Section titles */
-    h2 {
+    h1, h2 {
       color: #1abc9c;
-      margin-top: 2.5em;
-      margin-bottom: 1em;
-      text-shadow: 0 0 5px #000;
-      border-bottom: 2px solid #1abc9c;
-      padding-bottom: 0.25em;
+      margin-bottom: 0.5em;
     }
 
-    /* ESPACE CAFÉ bloc */
+    /* Bloc Espace Café (nouveau bloc à placer avant informatique) */
     #espace-cafe {
-      background-color: #ffffff15;
+      background-color: rgba(255,255,255,0.1);
       border-radius: 12px;
-      padding: 1.5em 1.8em;
-      box-shadow: 0 0 12px #00000066;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1em;
-      color: #d0f0e6;
-    }
-    #espace-cafe .item {
-      flex: 1 1 280px;
-      display: flex;
-      align-items: center;
-      gap: 0.7em;
-      font-size: 1.1em;
-    }
-    #espace-cafe .icon {
-      font-size: 2.8em;
-      color: #1abc9c;
-      width: 36px;
-      text-align: center;
-      user-select: none;
-    }
-
-    /* SERVICES informatique */
-    #services-informatique {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
-      gap: 1.6em;
-    }
-    .service-card {
-      background: #ffffff11;
       padding: 1.5em;
-      border-radius: 14px;
-      box-shadow: 0 0 10px #00000044;
-      cursor: pointer;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      color: #ccece6;
-      user-select: none;
-    }
-    .service-card:hover {
-      background: #1abc9c44;
-      transform: translateY(-7px);
-      color: #004d40;
-      box-shadow: 0 4px 20px #1abc9cbb;
-    }
-    .service-card img {
-      max-width: 120px;
-      margin-bottom: 1em;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #00000088;
-    }
-    .service-card p {
-      margin: 0;
-      font-weight: 600;
-      font-size: 1.05em;
+      margin-bottom: 2em;
+      box-shadow: 0 0 15px #00000050;
     }
 
-    /* Formulaire Contact */
-    #contact-form {
-      margin-top: 3em;
-      background: #1abc9c22;
-      padding: 2em 2.2em;
-      border-radius: 16px;
-      box-shadow: 0 0 18px #00000099;
-      max-width: 480px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    #contact-form h2 {
-      margin-top: 0;
-      margin-bottom: 1em;
-      text-align: center;
-      color: #0a3c33;
-      text-shadow: none;
-    }
-    #contact-form label {
-      display: block;
-      margin-bottom: 0.4em;
-      font-weight: bold;
-      color: #004d40;
-    }
-    #contact-form input,
-    #contact-form textarea {
-      width: 100%;
-      padding: 0.6em 0.9em;
-      margin-bottom: 1.2em;
-      border: 2px solid #1abc9c;
-      border-radius: 8px;
-      font-size: 1em;
-      font-family: inherit;
-      background: #f0fff9;
-      color: #004d40;
-      resize: vertical;
-      transition: border-color 0.3s ease;
-    }
-    #contact-form input:focus,
-    #contact-form textarea:focus {
-      border-color: #00bfa5;
-      outline: none;
-      background: #e0f7ef;
-    }
-    #contact-form button {
-      background-color: #004d40;
-      color: #a0f0d5;
-      font-weight: bold;
-      padding: 0.8em 1.6em;
-      border: none;
-      border-radius: 10px;
+    #espace-cafe p {
+      margin: 0.5em 0;
       font-size: 1.1em;
-      cursor: pointer;
-      width: 100%;
+    }
+
+    /* Bloc services informatique */
+    #services-informatique {
+      margin-bottom: 2em;
+    }
+
+    .service-card {
+      background-color: rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 1em;
+      margin-bottom: 1.5em;
+      box-shadow: 0 0 10px #00000050;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      gap: 1em;
       transition: background-color 0.3s ease;
     }
-    #contact-form button:hover {
-      background-color: #1abc9c;
-      color: #003322;
+
+    .service-card:hover {
+      background-color: rgba(26, 188, 156, 0.3);
     }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      #photo-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      #photo-container img {
-        width: 140px;
-        height: 140px;
-      }
-      #espace-cafe .item {
-        flex: 1 1 100%;
-        justify-content: center;
-      }
-      #services-informatique {
-        grid-template-columns: 1fr;
-      }
-      #contact-form {
-        max-width: 100%;
-      }
+    .service-icon {
+      font-size: 2.5em;
+      flex-shrink: 0;
+      width: 50px;
+      text-align: center;
+    }
+
+    .service-content {
+      flex: 1;
+    }
+
+    .service-title {
+      font-weight: bold;
+      font-size: 1.3em;
+      margin-bottom: 0.3em;
+    }
+
+    .service-desc {
+      font-size: 1em;
+      line-height: 1.3em;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+      background-color: #1abc9c;
+      color: #042927;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
 
   </style>
 </head>
 <body>
-  <header>Site officiel des services informatiques & Espace Café Ousmane CISSÉ à Treichville</header>
+  <header>
+    Ousmane CISSÉ — Services Informatiques & Espace Café
+  </header>
+
   <main>
+    <!-- Photo d'Ousmane -->
+    <section id="photo-ousmane">
+      <img src="images/ousmane.jpg" alt="Photo d'Ousmane CISSÉ" />
+    </section>
 
-    <div id="photo-container">
-      <img src="images/ousmane.jpg" alt="Photo d'Ousmane" />
-      <h1>Ousmane CISSÉ</h1>
-    </div>
-
+    <!-- Nouveau bloc Espace Café (placé avant informatique) -->
     <section id="espace-cafe">
+      <h2>ESPACE CAFÉ ☕</h2>
+      <p>Vente de MONTRES Toutes marques ⌚</p>
+      <p>MACHINE 🎰 à CAFÉ Nespresso, Cappuccino, vente de Capsule L'OR Espresso ristreto intensity</p>
+      <p>Démarches administratives et documents administratifs.</p>
+      <p>Divers Suivi Direct de vos Papiers</p>
+    </section>
+
+    <!-- Services informatiques -->
+    <section id="services-informatique">
       <h2>NOS SERVICES</h2>
-      <div class="item">
-        <div class="icon">☕</div>
-        <div>ESPACE CAFÉ<br/>Vente de MONTRES Toutes marques ⌚<br/>MACHINE 🎰 à CAFÉ Nespresso, Cappuccino, vente de Capsule L'OR Espresso ristretto intensity</div>
-      </div>
-      <div class="item">
-        <div class="icon">📄</div>
-        <div>Démarches administratives et documents administratifs.<br/>Divers suivi direct de vos papiers</div>
-      </div>
+
+      <article class="service-card">
+        <div class="service-icon">⌚</div>
+        <div class="service-content">
+          <div class="service-title">Montres</div>
+          <div class="service-desc">Vente de montres toutes marques, garanties et de qualité.</div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🎰</div>
+        <div class="service-content">
+          <div class="service-title">Machines à café</div>
+          <div class="service-desc">Vente de machines à café Nespresso, Cappuccino, et capsules.</div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">⌨️</div>
+        <div class="service-content">
+          <div class="service-title">Claviers & consommables</div>
+          <div class="service-desc">Vente de claviers, cartouches d'encre, consommables informatiques.</div>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🖥️</div>
+        <div class="service-content">
+          <div class="service-title">Services informatiques</div>
+          <div class="service-desc">Dépannage, maintenance, installation et autres prestations IT.</div>
+        </div>
+      </article>
     </section>
-
-    <section>
-      <h2>INFORMATIQUES & ACCESSOIRES</h2>
-      <div id="services-informatique">
-        <div class="service-card" onclick="alert('Claviers et accessoires. Contactez-nous !')">
-          <img src="images/clavier.jpg" alt="Clavier" />
-          <p>Claviers & Accessoires</p>
-        </div>
-        <div class="service-card" onclick="alert('Cartouches d\'encre pour toutes imprimantes. Contactez-nous !')">
-          <img src="images/cartouche.jpg" alt="Cartouche d'encre" />
-          <p>Cartouches d'encre</p>
-        </div>
-        <div class="service-card" onclick="alert('Ordinateurs & composants. Contactez-nous !')">
-          <img src="images/ordinateur.jpg" alt="Ordinateur" />
-          <p>Ordinateurs & Composants</p>
-        </div>
-        <div class="service-card" onclick="alert('Réparations & Dépannage. Contactez-nous !')">
-          <img src="images/reparation.jpg" alt="Réparation" />
-          <p>Réparations & Dépannage</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact-form">
-      <h2>Contactez-nous</h2>
-      <form>
-        <label for="name">Nom</label>
-        <input id="name" name="name" type="text" placeholder="Votre nom" required />
-
-        <label for="email">Email</label>
-        <input id="email" name="email" type="email" placeholder="Votre email" required />
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" placeholder="Votre message ici..." required></textarea>
-
-        <button type="submit" disabled title="Formulaire sans envoi automatique">Envoyer</button>
-      </form>
-      <p style="color:#ccc; font-size: 0.85em; margin-top: 0.5em; text-align:center;">
-        * Ce formulaire est uniquement décoratif. Pour envoyer un message, contactez directement au +225 07 78 19 16 ou <br/>
-        <a href="mailto:cissebems8@yahoo.fr" style="color:#1abc9c;">cissebems8@yahoo.fr</a>
-      </p>
-    </section>
-
   </main>
+
+  <footer>
+    Contact WhatsApp & Email : +225 07 78 19 16 - cissebems8@yahoo.fr
+  </footer>
 </body>
 </html>
