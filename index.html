@@ -1,107 +1,93 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ousmane CISSÉ — Services Informatiques & Espace Café</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ousmane CISSÉ — Services Informatiques & Café</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-    }
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }header {
+  background-color: #1abc9c;
+  padding: 2em;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  font-weight: bold;
+}
 
-    header {
-      background-color: #1abc9c;
-      padding: 1.5em;
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-      box-shadow: 0 0 15px #000;
-    }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  padding: 2em;
+}
 
-    main {
-      max-width: 1000px;
-      margin: 2em auto;
-      padding: 0 1em;
-    }
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
 
-    h2 {
-      color: #1abc9c;
-      border-bottom: 2px solid #1abc9c;
-      padding-bottom: 0.3em;
-      margin-bottom: 1em;
-    }
+.card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
 
-    section {
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      padding: 1.5em;
-      margin-bottom: 2em;
-      box-shadow: 0 0 10px #00000070;
-    }
+.card h3 {
+  color: #1abc9c;
+  margin: 0.8em 0 0.2em;
+}
 
-    .service-list {
-      list-style: none;
-      padding: 0;
-    }
+.card p {
+  padding: 0 1em 1.5em;
+  font-size: 1em;
+  color: #555;
+}
 
-    .service-list li {
-      margin-bottom: 1em;
-      padding-left: 1.2em;
-      position: relative;
-    }
+footer {
+  text-align: center;
+  padding: 2em;
+  background-color: #1abc9c;
+  color: white;
+  margin-top: 3em;
+}
 
-    .service-list li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      color: #1abc9c;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5em 1em;
-      background-color: #1abc9c;
-      margin-top: 3em;
-      font-size: 1em;
-      color: #00332a;
-    }
   </style>
 </head>
 <body>
+  <header>
+    Café Informatique — Ousmane CISSÉ à Treichville
+  </header>  <section class="services">
+    <div class="card">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Watch_Patek_Philippe.jpg/640px-Watch_Patek_Philippe.jpg" alt="Montre" />
+      <h3>Réparation de Montres</h3>
+      <p>Service rapide et professionnel pour vos montres de valeur, anciennes ou modernes.</p>
+    </div><div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Administrative_paperwork.jpg" alt="Papiers administratifs" />
+  <h3>Impression & Reliure</h3>
+  <p>Impression de documents officiels, reliures de dossiers, mémoires et plus encore.</p>
+</div>
 
-<header>
-  Ousmane CISSÉ — Services Informatiques & Espace Café
-</header>
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Espresso_machine_2.jpg/640px-Espresso_machine_2.jpg" alt="Machine à café" />
+  <h3>Machine à Café</h3>
+  <p>Profitez de notre machine à café professionnelle, disponible pour tous nos clients.</p>
+</div>
 
-<main>
-  <section id="espace-cafe">
-    <h2>ESPACE CAFÉ ☕</h2>
-    <ul class="service-list">
-      <li>Vente de MONTRES toutes marques ⌚</li>
-      <li>MACHINE 🎰 à CAFÉ Nespresso, Cappuccino, vente de Capsules L'OR Espresso ristretto intensity</li>
-      <li>Démarches administratives et documents officiels. Suivi direct de vos papiers</li>
-    </ul>
-  </section>
+<div class="card">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/03/Nespresso_capsules.jpg/640px-Nespresso_capsules.jpg" alt="Capsules à café" />
+  <h3>Capsules à Café</h3>
+  <p>Capsules Nespresso disponibles sur place. Goûtez le meilleur du café moderne.</p>
+</div>
 
-  <section id="informatique">
-    <h2>INFORMATIQUE & SERVICES</h2>
-    <ul class="service-list">
-      <li>Vente d’appareils informatiques et consommables</li>
-      <li>Vente de cartouches d’encre et accessoires imprimante</li>
-      <li>Vente de claviers et périphériques ⌨️</li>
-      <li>Services divers et prestations informatiques</li>
-      <li>Imprimerie et reliure</li>
-    </ul>
-  </section>
-</main>
-
-<footer>
-  Contact WhatsApp et Email : +225 07 78 19 16 - cissebems8@yahoo.fr
-</footer>
-
+  </section>  <footer>
+    © 2025 — Ousmane CISSÉ. Tous droits réservés.
+  </footer>
 </body>
 </html>
