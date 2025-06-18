@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ousmane CISSÉ — Services Informatiques</title>
+  <title>Ousmane CISSÉ — Services Informatiques & Espace Café</title>
   <style>
     body {
       margin: 0;
@@ -25,6 +25,37 @@
       padding: 2em;
     }
 
+    h2 {
+      color: #1abc9c;
+    }
+
+    /* Nouveau bloc Espace Café */
+    #espace-cafe {
+      background-color: #ffffff20;
+      border-radius: 10px;
+      padding: 1.5em;
+      margin-bottom: 2em;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      align-items: center;
+      box-shadow: 0 0 15px #00000050;
+    }
+
+    #espace-cafe .icon {
+      font-size: 3em;
+      flex: 0 0 60px;
+      text-align: center;
+      line-height: 1;
+    }
+
+    #espace-cafe .content {
+      flex: 1;
+      font-size: 1.1em;
+      line-height: 1.3em;
+    }
+
+    /* Services informatique */
     .services {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -54,10 +85,6 @@
       max-width: 100%;
       border-radius: 12px;
       box-shadow: 0 0 15px #00000080;
-    }
-
-    h2 {
-      color: #1abc9c;
     }
 
     form {
@@ -116,7 +143,23 @@
   </header>
 
   <section>
-    <h2>Nos Services</h2>
+    <h2>NOS SERVICES</h2>
+
+    <!-- Nouveau bloc ESPACE CAFÉ -->
+    <div id="espace-cafe">
+      <div class="icon" title="Montres">⌚</div>
+      <div class="content">
+        <strong>ESPACE CAFÉ ☕</strong><br>
+        Vente de MONTRES Toutes marques ⌚<br>
+        MACHINE 🎰 à CAFÉ Nespresso, Cappuccino, vente de Capsule L'OR Espresso ristretto intensity<br><br>
+        Démarches administratives et documents administratifs.<br>
+        Divers Suivi Direct de vos Papiers
+      </div>
+      <div class="icon" title="Machine à café">🎰</div>
+      <div class="icon" title="Documents">📄</div>
+    </div>
+
+    <!-- Services informatiques -->
     <div class="services">
       <div class="card" onclick="showImage('ordi')">
         💻 Vente d'appareils informatiques
