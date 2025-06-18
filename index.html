@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site officiel — Ousmane CISSÉ</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ousmane CISSÉ — Services Informatiques</title>
   <style>
     body {
       margin: 0;
@@ -14,11 +14,11 @@
 
     header {
       background-color: #1abc9c;
-      padding: 1em;
+      padding: 1.2em;
       text-align: center;
-      font-size: 1.5em;
+      font-size: 1.8em;
       font-weight: bold;
-      box-shadow: 0 0 10px #000;
+      box-shadow: 0 0 15px #000;
     }
 
     section {
@@ -37,11 +37,55 @@
       border-radius: 10px;
       box-shadow: 0 0 10px #00000030;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .card:hover {
       transform: translateY(-5px);
       background-color: #1abc9c20;
+    }
+
+    #image-display {
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    #image-display img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 0 15px #00000080;
+    }
+
+    h2 {
+      color: #1abc9c;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      margin-top: 1em;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      background-color: #1abc9c;
+      color: white;
+      padding: 0.8em;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #16a085;
     }
 
     footer {
@@ -52,8 +96,16 @@
       font-size: 0.9em;
     }
 
-    h2 {
+    .contact-links a {
+      display: inline-block;
+      margin: 0.5em;
       color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact-links a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -64,42 +116,86 @@
   </header>
 
   <section>
-    <h2>Présentation</h2>
-    <p>
-      Bienvenue sur le site officiel des services informatiques de Ousmane CISSÉ.
-      Expert en solutions technologiques, Ousmane vous propose des prestations professionnelles adaptées à tous vos besoins à Treichville et au-delà.
-    </p>
+    <h2>Nos Services</h2>
+    <div class="services">
+      <div class="card" onclick="showImage('ordi')">
+        💻 Vente d'appareils informatiques
+      </div>
+      <div class="card" onclick="showImage('cartouche')">
+        🖨️ Consommables & Cartouches
+      </div>
+      <div class="card" onclick="showImage('clavier')">
+        ⌨️ Claviers & Périphériques
+      </div>
+      <div class="card" onclick="showImage('depannage')">
+        🛠️ Services & Dépannage
+      </div>
+      <div class="card" onclick="showImage('divers')">
+        📦 Divers & Prestations personnalisées
+      </div>
+    </div>
+
+    <div id="image-display">
+      <h3 id="image-title">Cliquez sur un service pour afficher une illustration</h3>
+      <img id="service-image" src="" alt="" style="display:none;" />
+    </div>
   </section>
 
   <section>
-    <h2>Nos Services</h2>
-    <div class="services">
-      <div class="card">
-        <h3>💻 Vente d'appareils informatiques</h3>
-        <p>Ordinateurs portables, bureaux, accessoires de haute qualité.</p>
-      </div>
-      <div class="card">
-        <h3>🖨️ Consommables & Cartouches</h3>
-        <p>Fourniture de cartouches d'encre, toners et papiers spécialisés.</p>
-      </div>
-      <div class="card">
-        <h3>⌨️ Claviers & périphériques</h3>
-        <p>Vente de claviers, souris, casques audio, webcams…</p>
-      </div>
-      <div class="card">
-        <h3>🛠️ Services & Prestations</h3>
-        <p>Maintenance, dépannage, configuration de réseaux et logiciels.</p>
-      </div>
-      <div class="card">
-        <h3>📦 Divers & Prestations personnalisées</h3>
-        <p>Photocopies, impressions, conseils, achats en ligne assistés.</p>
-      </div>
+    <h2>Envoyer une commande</h2>
+    <form action="mailto:cissebems8@yahoo.fr" method="POST" enctype="text/plain">
+      <input type="text" name="Nom" placeholder="Votre nom" required>
+      <input type="email" name="Email" placeholder="Votre adresse email" required>
+      <textarea name="Commande" rows="5" placeholder="Votre message ou commande ici..." required></textarea>
+      <button type="submit">Envoyer la commande</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <div class="contact-links">
+      <p><strong>Téléphone / WhatsApp :</strong> <a href="https://wa.me/22507781916" target="_blank">+225 07 78 19 16</a></p>
+      <p><strong>Email :</strong> <a href="mailto:cissebems8@yahoo.fr">cissebems8@yahoo.fr</a></p>
     </div>
   </section>
 
   <footer>
     &copy; 2025 Café Ousmane CISSÉ — Tous droits réservés.
   </footer>
+
+  <script>
+    function showImage(service) {
+      const image = document.getElementById("service-image");
+      const title = document.getElementById("image-title");
+
+      const images = {
+        ordi: {
+          src: "https://upload.wikimedia.org/wikipedia/commons/2/28/Laptop.png",
+          title: "Ordinateurs portables et de bureau"
+        },
+        cartouche: {
+          src: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Ink_cartridges_for_printer.jpg",
+          title: "Cartouches d’encre et consommables"
+        },
+        clavier: {
+          src: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Computer_keyboard_French_layout.jpg",
+          title: "Claviers et accessoires"
+        },
+        depannage: {
+          src: "https://upload.wikimedia.org/wikipedia/commons/4/49/Computer_Repair_Services.jpg",
+          title: "Dépannage et maintenance"
+        },
+        divers: {
+          src: "https://upload.wikimedia.org/wikipedia/commons/3/37/Stationery_shop.jpg",
+          title: "Prestations diverses & photocopies"
+        }
+      };
+
+      image.src = images[service].src;
+      title.textContent = images[service].title;
+      image.style.display = "block";
+    }
+  </script>
 
 </body>
 </html>
