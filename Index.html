@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ousmane CISSÉ | Services Rapides & Fiables</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .service {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin: 10px;
+      padding: 20px;
+      width: 250px;
+      text-align: center;
+    }
+    .service img {
+      height: 60px;
+    }
+    .contact, .formulaire {
+      padding: 20px;
+      text-align: center;
+    }
+    input, textarea, button {
+      padding: 10px;
+      margin: 10px 0;
+      width: 80%;
+      max-width: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .services {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ousmane CISSÉ</h1>
+    <p>Services Fiables, Rapides et Sécurisés — International</p>
+  </header>  <section class="services">
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/000000/print.png" alt="Photocopie">
+      <h3>Photocopie & Impression</h3>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/000000/binder.png" alt="Reliure">
+      <h3>Traitement de texte & Reliure</h3>
+    </div>
+    <div class="service">
+      <img src="https://img.icons8.com/ios-filled/100/000000/coffee.png" alt="Café">
+      <h3>Café Express & Vente informatique</h3>
+    </div>
+  </section>  <section class="formulaire">
+    <h2>Envoyer un document à imprimer</h2>
+    <form action="mailto:cissebems8@yahoo.fr" method="post" enctype="text/plain">
+      <input type="text" name="Nom" placeholder="Votre nom" required>
+      <textarea name="Message" placeholder="Message (ex: 3 copies recto verso)" rows="4" required></textarea>
+      <input type="file" name="Fichier" accept=".pdf,.doc,.docx" required>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>  <section class="contact">
+    <h2>Contact & Localisation</h2>
+    <p><strong>Adresse :</strong> Treichville, Nanan Yamousso, Abidjan — Derrière le marché</p>
+    <p><strong>Horaires :</strong> 08h00 – 19h00</p>
+    <p><strong>WhatsApp :</strong> <a href="https://wa.me/22507781916" target="_blank">+225 07 78 19 16</a></p>
+  </section>  <footer>
+    <p>&copy; 2025 Ousmane CISSÉ — Tous droits réservés</p>
+  </footer>
+</body>
+  </html>
