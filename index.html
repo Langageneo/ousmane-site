@@ -2,63 +2,118 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Ousmane CISSÉ - Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienvenue chez Ousmane CISSÉ — Services</title>
   <style>
     body {
-      background: #222;
-      color: #eee;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 2em;
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      line-height: 1.6;
     }
-    h1 {
-      color: #1abc9c;
+
+    header {
+      background-color: #1abc9c;
+      padding: 2em;
+      text-align: center;
+      font-size: 2em;
+      font-weight: bold;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px #000;
+    }
+
+    .emoji-banner {
+      text-align: center;
+      font-size: 4em;
+      margin-top: 1em;
       margin-bottom: 1em;
     }
-    .service {
-      font-size: 6rem; /* très grand */
-      margin: 1em 0 0.3em;
+
+    section {
+      padding: 2em;
     }
-    .description {
-      font-size: 1.5rem;
-      margin-bottom: 2em;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5em;
+    }
+
+    .card {
+      background-color: #ffffff10;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00000030;
+      text-align: center;
+    }
+
+    .card h3 {
+      color: #1abc9c;
+      margin-bottom: 0.5em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #00000030;
+      font-size: 0.9em;
+      margin-top: 3em;
+      border-top: 1px solid #1abc9c;
     }
   </style>
 </head>
 <body>
 
-  <h1>Bienvenue chez Ousmane CISSÉ</h1>
+  <header>Bienvenue chez Ousmane CISSÉ — Services</header>
 
-  <div>
-    <div class="service">⌚</div>
-    <div class="description">
-      Montre - Réparation de Montres : Service rapide et professionnel pour vos montres de valeur, anciennes ou modernes.
-    </div>
+  <div class="emoji-banner">
+    ⌚ 📄 🎰 ☕
   </div>
 
-  <div>
-    <div class="service">📄</div>
-    <div class="description">
-      Papiers administratifs - Impression & Reliure : Impression de documents officiels, reliures de dossiers, mémoires et plus encore.
-    </div>
-  </div>
+  <section>
+    <h2 style="text-align:center; color:#1abc9c;">Nos Services</h2>
+    <div class="services">
 
-  <div>
-    <div class="service">☕</div>
-    <div class="description">
-      Machine à café - Profitez de notre machine à café professionnelle, disponible pour tous nos clients.
-    </div>
-  </div>
+      <div class="card">
+        <h3>Démarches administratives</h3>
+        <p>Impression de papiers, reliure, traitement de texte, suivi direct de dossiers.</p>
+      </div>
 
-  <div>
-    <div class="service">🟤</div> <!-- Capsule café stylisée -->
-    <div class="description">
-      Capsule à café - Vente de capsules compatibles pour toutes machines Nespresso.
+      <div class="card">
+        <h3>Vente de café</h3>
+        <p>Nespresso, Cappuccino, Capsules à café (L'OR Espresso Ristretto).</p>
+      </div>
+
+      <div class="card">
+        <h3>Montres toutes marques</h3>
+        <p>Vente et réparation de montres modernes et anciennes à Treichville.</p>
+      </div>
+
+      <div class="card">
+        <h3>Machine à café</h3>
+        <p>Machines à café disponibles, avec service et entretien inclus.</p>
+      </div>
+
+      <div class="card">
+        <h3>Informatique</h3>
+        <p>Impression couleur / noir & blanc, traitement de texte, reliure.</p>
+      </div>
+
+      <div class="card">
+        <h3>Accessoires & consommables</h3>
+        <p>Claviers ⌨️, cartouches imprimante, papiers, accessoires informatiques.</p>
+      </div>
+
     </div>
-  </div>
+  </section>
+
+  <footer>
+    Contact :<br>
+    📞 +225 07 78 19 16<br>
+    📧 cissebems8@yahoo.fr<br><br>
+    © 2025 Ousmane CISSÉ café informatique — Tous droits réservés
+  </footer>
 
 </body>
 </html>
