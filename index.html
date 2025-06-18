@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!DOCTYPE html><html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ousmane CISSÉ — Services Informatiques & Espace Café</title>
   <style>
     body {
@@ -10,177 +9,102 @@
       font-family: 'Arial', sans-serif;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: white;
-      min-height: 100vh;
-    }
+    }header {
+  background-color: #1abc9c;
+  padding: 1.5em;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  box-shadow: 0 0 15px #000;
+}
 
-    header {
-      background-color: #1abc9c;
-      padding: 1.2em;
-      text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-      box-shadow: 0 0 15px #000;
-    }
+#photo-ousmane {
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+}
 
-    main {
-      max-width: 900px;
-      margin: 2em auto;
-      padding: 0 1em;
-    }
+#photo-ousmane img {
+  max-width: 250px;
+  border-radius: 12px;
+  border: 4px solid #1abc9c;
+  box-shadow: 0 0 15px #00000090;
+  object-fit: cover;
+}
 
-    /* Photo d'Ousmane en haut, bien encadrée */
-    #photo-ousmane {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 2em;
-    }
+section {
+  padding: 2em;
+}
 
-    #photo-ousmane img {
-      max-width: 250px;
-      border-radius: 12px;
-      border: 4px solid #1abc9c;
-      box-shadow: 0 0 15px #00000090;
-      object-fit: cover;
-      height: auto;
-    }
+h2 {
+  color: #1abc9c;
+}
 
-    h1, h2 {
-      color: #1abc9c;
-      margin-bottom: 0.5em;
-    }
+.bloc {
+  background-color: #ffffff20;
+  border-radius: 10px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  box-shadow: 0 0 15px #00000050;
+}
 
-    /* Bloc Espace Café (nouveau bloc à placer avant informatique) */
-    #espace-cafe {
-      background-color: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 1.5em;
-      margin-bottom: 2em;
-      box-shadow: 0 0 15px #00000050;
-    }
+.bloc img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
 
-    #espace-cafe p {
-      margin: 0.5em 0;
-      font-size: 1.1em;
-    }
+.bloc .content {
+  flex: 1;
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
 
-    /* Bloc services informatique */
-    #services-informatique {
-      margin-bottom: 2em;
-    }
+.contact {
+  padding: 2em;
+  text-align: center;
+  background-color: #1abc9c20;
+  border-top: 2px solid #1abc9c;
+}
 
-    .service-card {
-      background-color: rgba(255,255,255,0.1);
-      border-radius: 12px;
-      padding: 1em;
-      margin-bottom: 1.5em;
-      box-shadow: 0 0 10px #00000050;
-      cursor: default;
-      display: flex;
-      align-items: center;
-      gap: 1em;
-      transition: background-color 0.3s ease;
-    }
-
-    .service-card:hover {
-      background-color: rgba(26, 188, 156, 0.3);
-    }
-
-    .service-icon {
-      font-size: 2.5em;
-      flex-shrink: 0;
-      width: 50px;
-      text-align: center;
-    }
-
-    .service-content {
-      flex: 1;
-    }
-
-    .service-title {
-      font-weight: bold;
-      font-size: 1.3em;
-      margin-bottom: 0.3em;
-    }
-
-    .service-desc {
-      font-size: 1em;
-      line-height: 1.3em;
-      color: #ddd;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1em;
-      font-size: 0.9em;
-      background-color: #1abc9c;
-      color: #042927;
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-    }
+.contact p {
+  font-size: 1.2em;
+}
 
   </style>
 </head>
 <body>
-  <header>
-    Ousmane CISSÉ — Services Informatiques & Espace Café
-  </header>
+  <header>Site officiel des services informatiques Café Ousmane CISSÉ</header>  <div id="photo-ousmane">
+    <img src="images/ousmane.jpg" alt="Photo d'Ousmane" />
+  </div>  <section>
+    <h2>NOS SERVICES</h2><div class="bloc">
+  <img src="https://img.icons8.com/ios-filled/100/coffee.png" alt="Café" />
+  <div class="content">
+    <strong>ESPACE CAFÉ ☕</strong><br>
+    Vente de montres toutes marques ⌚, machines à café Nespresso, Cappuccino,<br>
+    Vente de Capsules L'OR Espresso Ristretto Intensity<br>
+    Démarches administratives & Suivi Direct de vos papiers
+  </div>
+</div>
 
-  <main>
-    <!-- Photo d'Ousmane -->
-    <section id="photo-ousmane">
-      <img src="images/ousmane.jpg" alt="Photo d'Ousmane CISSÉ" />
-    </section>
+<div class="bloc">
+  <img src="https://img.icons8.com/ios-filled/100/keyboard.png" alt="Clavier" />
+  <div class="content">
+    <strong>INFORMATIQUE</strong><br>
+    Vente d'appareils informatiques, consommables, cartouches d’imprimantes,<br>
+    Reliure, impression et prestations diverses.
+  </div>
+</div>
 
-    <!-- Nouveau bloc Espace Café (placé avant informatique) -->
-    <section id="espace-cafe">
-      <h2>ESPACE CAFÉ ☕</h2>
-      <p>Vente de MONTRES Toutes marques ⌚</p>
-      <p>MACHINE 🎰 à CAFÉ Nespresso, Cappuccino, vente de Capsule L'OR Espresso ristreto intensity</p>
-      <p>Démarches administratives et documents administratifs.</p>
-      <p>Divers Suivi Direct de vos Papiers</p>
-    </section>
-
-    <!-- Services informatiques -->
-    <section id="services-informatique">
-      <h2>NOS SERVICES</h2>
-
-      <article class="service-card">
-        <div class="service-icon">⌚</div>
-        <div class="service-content">
-          <div class="service-title">Montres</div>
-          <div class="service-desc">Vente de montres toutes marques, garanties et de qualité.</div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">🎰</div>
-        <div class="service-content">
-          <div class="service-title">Machines à café</div>
-          <div class="service-desc">Vente de machines à café Nespresso, Cappuccino, et capsules.</div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">⌨️</div>
-        <div class="service-content">
-          <div class="service-title">Claviers & consommables</div>
-          <div class="service-desc">Vente de claviers, cartouches d'encre, consommables informatiques.</div>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">🖥️</div>
-        <div class="service-content">
-          <div class="service-title">Services informatiques</div>
-          <div class="service-desc">Dépannage, maintenance, installation et autres prestations IT.</div>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <footer>
-    Contact WhatsApp & Email : +225 07 78 19 16 - cissebems8@yahoo.fr
-  </footer>
+  </section>  <div class="contact">
+    <h2>Contact</h2>
+    <p>
+      WhatsApp : +225 07 78 19 16<br>
+      Email : <a href="mailto:cissebems8@yahoo.fr">cissebems8@yahoo.fr</a>
+    </p>
+  </div>
 </body>
 </html>
