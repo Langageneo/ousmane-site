@@ -27,19 +27,35 @@
 
     h2 {
       color: #1abc9c;
+      margin-bottom: 0.8em;
     }
 
-    /* Nouveau bloc Espace Café */
+    /* Photo Ousmane en haut */
+    #photo-ousmane {
+      text-align: center;
+      margin: 1em 0 2em;
+    }
+
+    #photo-ousmane img {
+      border: 3px solid #333;
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #00000080;
+    }
+
+    /* Bloc Espace Café */
     #espace-cafe {
       background-color: #ffffff20;
       border-radius: 10px;
-      padding: 1.5em;
+      padding: 1.8em 2em;
       margin-bottom: 2em;
+      box-shadow: 0 0 15px #00000050;
       display: flex;
       flex-wrap: wrap;
       gap: 1em;
       align-items: center;
-      box-shadow: 0 0 15px #00000050;
+      font-size: 1.1em;
+      line-height: 1.4em;
     }
 
     #espace-cafe .icon {
@@ -47,12 +63,11 @@
       flex: 0 0 60px;
       text-align: center;
       line-height: 1;
+      user-select: none;
     }
 
     #espace-cafe .content {
       flex: 1;
-      font-size: 1.1em;
-      line-height: 1.3em;
     }
 
     /* Services informatique */
@@ -76,169 +91,69 @@
       background-color: #1abc9c20;
     }
 
-    #image-display {
-      text-align: center;
-      margin-top: 2em;
-    }
-
-    #image-display img {
-      max-width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 0 15px #00000080;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1em;
-      margin-top: 1em;
-    }
-
-    input, textarea {
-      padding: 10px;
-      border: none;
-      border-radius: 5px;
-      font-size: 1em;
-    }
-
-    button {
-      background-color: #1abc9c;
-      color: white;
-      padding: 0.8em;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #16a085;
-    }
-
+    /* Contact & footer */
     footer {
       text-align: center;
-      padding: 1em;
+      padding: 1.5em;
       background-color: #111;
-      color: #ccc;
       font-size: 0.9em;
-    }
-
-    .contact-links a {
-      display: inline-block;
-      margin: 0.5em;
-      color: #1abc9c;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .contact-links a:hover {
-      text-decoration: underline;
+      color: #bbb;
     }
   </style>
 </head>
 <body>
 
   <header>
-    ☕ Ousmane CISSÉ — Services Informatiques à Treichville
+    Ousmane CISSÉ — Services Informatiques & Espace Café
   </header>
+
+  <!-- Photo Ousmane -->
+  <div id="photo-ousmane">
+    <img src="images/ousmane.jpg" alt="Photo d'Ousmane">
+  </div>
 
   <section>
     <h2>NOS SERVICES</h2>
 
-    <!-- Nouveau bloc ESPACE CAFÉ -->
+    <!-- Bloc Espace Café -->
     <div id="espace-cafe">
-      <div class="icon" title="Montres">⌚</div>
+      <div class="icon">☕</div>
       <div class="content">
-        <strong>ESPACE CAFÉ ☕</strong><br>
+        <strong>ESPACE CAFÉ</strong><br>
         Vente de MONTRES Toutes marques ⌚<br>
-        MACHINE 🎰 à CAFÉ Nespresso, Cappuccino, vente de Capsule L'OR Espresso ristretto intensity<br><br>
+        MACHINE 🎰 à CAFÉ Nespresso, Cappuccino, vente de Capsule L'OR Espresso ristreto intensity<br><br>
         Démarches administratives et documents administratifs.<br>
-        Divers Suivi Direct de vos Papiers
+        Divers Suivie Direct de vos Papiers
       </div>
-      <div class="icon" title="Machine à café">🎰</div>
-      <div class="icon" title="Documents">📄</div>
     </div>
 
-    <!-- Services informatiques -->
+    <!-- Services informatique -->
     <div class="services">
-      <div class="card" onclick="showImage('ordi')">
-        💻 Vente d'appareils informatiques
+      <div class="card" onclick="alert('Claviers : vente et dépannage')">
+        <h3>Claviers ⌨️</h3>
+        <p>Vente et dépannage de claviers informatiques</p>
       </div>
-      <div class="card" onclick="showImage('cartouche')">
-        🖨️ Consommables & Cartouches
+      <div class="card" onclick="alert('Cartouches d’encre : recharges et ventes')">
+        <h3>Cartouches d’encre 🖨️</h3>
+        <p>Recharges et ventes de cartouches pour imprimantes</p>
       </div>
-      <div class="card" onclick="showImage('clavier')">
-        ⌨️ Claviers & Périphériques
+      <div class="card" onclick="alert('Ordinateurs : configuration et maintenance')">
+        <h3>Ordinateurs 💻</h3>
+        <p>Configuration, réparation et maintenance</p>
       </div>
-      <div class="card" onclick="showImage('depannage')">
-        🛠️ Services & Dépannage
-      </div>
-      <div class="card" onclick="showImage('divers')">
-        📦 Divers & Prestations personnalisées
-      </div>
-    </div>
-
-    <div id="image-display">
-      <h3 id="image-title">Cliquez sur un service pour afficher une illustration</h3>
-      <img id="service-image" src="" alt="" style="display:none;" />
+      <!-- Ajoute d’autres cartes services ici si tu veux -->
     </div>
   </section>
 
   <section>
-    <h2>Envoyer une commande</h2>
-    <form action="mailto:cissebems8@yahoo.fr" method="POST" enctype="text/plain">
-      <input type="text" name="Nom" placeholder="Votre nom" required>
-      <input type="email" name="Email" placeholder="Votre adresse email" required>
-      <textarea name="Commande" rows="5" placeholder="Votre message ou commande ici..." required></textarea>
-      <button type="submit">Envoyer la commande</button>
-    </form>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <div class="contact-links">
-      <p><strong>Téléphone / WhatsApp :</strong> <a href="https://wa.me/22507781916" target="_blank">+225 07 78 19 16</a></p>
-      <p><strong>Email :</strong> <a href="mailto:cissebems8@yahoo.fr">cissebems8@yahoo.fr</a></p>
-    </div>
+    <h2>CONTACTS</h2>
+    <p>Contact WhatsApp et email : +225 07 78 19 16</p>
+    <p>Email : <a href="mailto:cissebems8@yahoo.fr" style="color:#1abc9c;">cissebems8@yahoo.fr</a></p>
   </section>
 
   <footer>
-    &copy; 2025 Café Ousmane CISSÉ — Tous droits réservés.
+    &copy; 2025 Café Ousmane CISSÉ - Tous droits réservés
   </footer>
-
-  <script>
-    function showImage(service) {
-      const image = document.getElementById("service-image");
-      const title = document.getElementById("image-title");
-
-      const images = {
-        ordi: {
-          src: "https://upload.wikimedia.org/wikipedia/commons/2/28/Laptop.png",
-          title: "Ordinateurs portables et de bureau"
-        },
-        cartouche: {
-          src: "https://upload.wikimedia.org/wikipedia/commons/1/1a/Ink_cartridges_for_printer.jpg",
-          title: "Cartouches d’encre et consommables"
-        },
-        clavier: {
-          src: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Computer_keyboard_French_layout.jpg",
-          title: "Claviers et accessoires"
-        },
-        depannage: {
-          src: "https://upload.wikimedia.org/wikipedia/commons/4/49/Computer_Repair_Services.jpg",
-          title: "Dépannage et maintenance"
-        },
-        divers: {
-          src: "https://upload.wikimedia.org/wikipedia/commons/3/37/Stationery_shop.jpg",
-          title: "Prestations diverses & photocopies"
-        }
-      };
-
-      image.src = images[service].src;
-      title.textContent = images[service].title;
-      image.style.display = "block";
-    }
-  </script>
 
 </body>
 </html>
